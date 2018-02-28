@@ -19,12 +19,13 @@ export default {
   components:{
   },
   props:[
+	'foo',
 	'name',
 	'nav-group'
   ],
   data(){
 	return {
-	
+		
 	}
   },
   created(){
@@ -33,7 +34,7 @@ export default {
   },
   mounted(){
 
-
+	this.$emit('update:foo', 2);
   },
   watch: {
 

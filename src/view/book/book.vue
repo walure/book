@@ -1,9 +1,12 @@
 <template>
-<Page name="图书" nav-group="book">
+<Page name="图书" nav-group="book" :foo.sync="bar" >
+
 	<div class="echarts" slot="content" >
 	 <div id="mains" style="width: 300px;height:200px;"></div>
 	</div>
-	<div slot="footer">asdas</div>
+	<div slot="footer">asdas
+		{{bar}}
+	</div>
 </Page>
 </template>
 
@@ -17,7 +20,7 @@ components: {
   },
   data () {
     return {
-	
+		bar:1
     }
   },
   mounted () {
