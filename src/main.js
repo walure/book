@@ -7,8 +7,10 @@ import router from './router'
 import MuseUI from 'muse-ui'
 import  './components/index.js'
 import Page from './components/page/page'
+import Alert from  './packages/alert/index.js'
 
 Vue.use(Page)
+Vue.use(Alert)
 
 import 'muse-ui/dist/muse-ui.css'
 import './style/style.less'
@@ -23,6 +25,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  template: '<App/>',
-  components: { App ,MuseUI}
+  render: h => h(App),
+  components: { App ,MuseUI,Alert}
 })

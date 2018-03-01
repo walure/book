@@ -6,6 +6,9 @@
 	</div>
 	<div slot="footer">asdas
 		{{bar}}
+		
+		<el-alert title="成功提示的文案"
+    type="success"></el-alert>
 	</div>
 </Page>
 </template>
@@ -24,6 +27,7 @@ components: {
     }
   },
   mounted () {
+	console.log(this.$alert)
 	this.draw()
   },
   methods:{
